@@ -44,7 +44,7 @@ export default function SubscriptionForm() {
             <Input.Field
               type="text"
               id="name"
-              placeholder="Nome completo"
+              placeholder="Informe o nome completo"
               {...register('name')}
             />
           </Input.Root>
@@ -62,7 +62,7 @@ export default function SubscriptionForm() {
             <Input.Field
               type="email"
               id="email"
-              placeholder="Seu melhor e-mail"
+              placeholder="Insira o e-mail"
               {...register('email')}
             />
           </Input.Root>

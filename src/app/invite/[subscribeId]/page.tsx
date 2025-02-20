@@ -5,8 +5,15 @@ import Image from 'next/image'
 import InviteLinkInput from './invite-link-input'
 import Stats from './stats'
 
-export default function InvitePage() {
-  const inviteLink = 'http://localhost:3000/invite/123456'
+export type InvitePageProps = {
+  params: Promise<{
+    subscribeId: string
+  }>
+}
+
+export default async function InvitePage({ params }: InvitePageProps) {
+  const { subscribeId } = await params
+  const inviteLink = `http://localhost:3333/invites/${subscribeId}`
 
   return (
     <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
